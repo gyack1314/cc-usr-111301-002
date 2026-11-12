@@ -1,0 +1,134 @@
+{
+  "kind": "erasure-shards",
+  "assets": [
+    {
+      "path": "s0-r0.bin",
+      "bytes": 4,
+      "sha256": "4e963f8d2a6ce4bf656a57374419d3e37f3ebde9acd32242977152fc6893ad09"
+    },
+    {
+      "path": "s0-r1.bin",
+      "bytes": 4,
+      "sha256": "f8711ebdcc5624f7054a37fda15aa8e9c145818fe68792d2239e46a93e3dbfef"
+    },
+    {
+      "path": "s0-r2.bin",
+      "bytes": 4,
+      "sha256": "01f46ac106b64234cc9f45c33340484b50315ee37eb11942b10f30b071b3d6c0"
+    },
+    {
+      "path": "s1-r0.bin",
+      "bytes": 4,
+      "sha256": "f7053d0d0cef9983866cf233ef60abf11bed01f161d9a6f6e99233e1c27b6991"
+    },
+    {
+      "path": "s1-r1.bin",
+      "bytes": 4,
+      "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+    },
+    {
+      "path": "s1-r2.bin",
+      "bytes": 4,
+      "sha256": "93d71cacddcc9c75563eb40fdf702df1cca39fd502aff8784dc1a950f050503c"
+    }
+  ],
+  "generation": "g1",
+  "k": 2,
+  "m": 1,
+  "block_bytes": 4,
+  "polynomial": "0x11d",
+  "matrix_points": [
+    1,
+    2,
+    3
+  ],
+  "stripes": [
+    {
+      "index": 0,
+      "rows": [
+        {
+          "row_index": 0,
+          "asset": {
+            "path": "s0-r0.bin",
+            "bytes": 4,
+            "sha256": "4e963f8d2a6ce4bf656a57374419d3e37f3ebde9acd32242977152fc6893ad09"
+          },
+          "mirrors": [
+            "https://mirror.test/g1/s0/r0"
+          ],
+          "available": true
+        },
+        {
+          "row_index": 1,
+          "asset": {
+            "path": "s0-r1.bin",
+            "bytes": 4,
+            "sha256": "f8711ebdcc5624f7054a37fda15aa8e9c145818fe68792d2239e46a93e3dbfef"
+          },
+          "mirrors": [
+            "https://mirror.test/g1/s0/r1"
+          ],
+          "available": false
+        },
+        {
+          "row_index": 2,
+          "asset": {
+            "path": "s0-r2.bin",
+            "bytes": 4,
+            "sha256": "01f46ac106b64234cc9f45c33340484b50315ee37eb11942b10f30b071b3d6c0"
+          },
+          "mirrors": [
+            "https://mirror.test/g1/s0/r2"
+          ],
+          "available": true,
+          "generation": "g0"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "rows": [
+        {
+          "row_index": 0,
+          "asset": {
+            "path": "s1-r0.bin",
+            "bytes": 4,
+            "sha256": "f7053d0d0cef9983866cf233ef60abf11bed01f161d9a6f6e99233e1c27b6991"
+          },
+          "mirrors": [
+            "https://mirror.test/g1/s1/r0"
+          ],
+          "available": true
+        },
+        {
+          "row_index": 1,
+          "asset": {
+            "path": "s1-r1.bin",
+            "bytes": 4,
+            "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+          },
+          "mirrors": [
+            "https://mirror.test/g1/s1/r1"
+          ],
+          "available": false
+        },
+        {
+          "row_index": 2,
+          "asset": {
+            "path": "s1-r2.bin",
+            "bytes": 4,
+            "sha256": "93d71cacddcc9c75563eb40fdf702df1cca39fd502aff8784dc1a950f050503c"
+          },
+          "mirrors": [
+            "https://mirror.test/g1/s1/r2"
+          ],
+          "available": true
+        }
+      ]
+    }
+  ],
+  "original_length": 11,
+  "original_sha256": "5571ba88534d26156bf9812cc6e641364d4f023af74b7392b6e66eb13fd6fb97",
+  "max_buffered_stripes": 1,
+  "download_budget": 100
+}
