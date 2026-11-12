@@ -22,9 +22,11 @@ class MaterialTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             p=Path(d)/'x';p.write_bytes(b'abc');r={'path':'x','bytes':3,'sha256':hashlib.sha256(b'abc').hexdigest()};self.assertEqual(asset(d,r),b'abc')
             with self.assertRaises(ValueError):asset(d,{**r,'path':'../x'})
-            for raw in ('[]','null','{"a":NaN}'):
+            for raw in ('[]','null','{"a":NaN}','{"a":1,"a":2}'):
                 p.write_text(raw,encoding='utf8')
                 with self.assertRaises(ValueError):load(p)
+            p.write_bytes(b'{"a":1}\xff')
+            with self.assertRaises(ValueError):load(p)
     def test_replay_position(self):
         r=Replay([{'request':{'method':'GET','url':'https://local.invalid/a'},'response':{'status':200}}])
         with self.assertRaises(ValueError):r.next('POST','https://local.invalid/a')
